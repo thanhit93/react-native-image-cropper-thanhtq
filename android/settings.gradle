@@ -1,0 +1,4 @@
+rootProject.name = 'CropImagePicker'
+
+include ':cropper'
+project(':cropper').projectDir = new File('libs/cropper')

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <LinearLayout
+        android:id="@+id/llTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+
+    </LinearLayout>
+    
+    <com.theartofdev.edmodo.cropper.CropImageView
+        android:id="@+id/cropImageView"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llTop"
+        android:layout_above="@+id/llBottom"/>
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_alignParentBottom="true">
+       <TextView
+           android:id="@+id/btnCancel"
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="102"
+           android:background="#212121"
+           android:text="CANCEL"
+           android:textColor="@android:color/white"
+           android:gravity="center"
+           android:textSize="12dp"/>
+        <TextView
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="258"
+            android:background="#917BD5"
+            android:text="CROP AND SAVE"
+            android:textColor="@android:color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:textSize="12dp"/>
+    </LinearLayout>
+</RelativeLayout>
