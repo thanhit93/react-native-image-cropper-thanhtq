@@ -16,10 +16,12 @@ import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
 import java.io.File;
+import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 
 import static android.app.Activity.RESULT_OK;
+import static com.cropimagepicker.utils.MediaUtils.transferImageToGallery;
 
 public class ImageCropperModule extends ReactContextBaseJavaModule implements ActivityEventListener{
 
@@ -97,14 +99,15 @@ public class ImageCropperModule extends ReactContextBaseJavaModule implements Ac
             SHOW_CROP_OVERLAY_KEY="showCropOverlay",
             MIN_CROP_WINDOW_KEY="minCropWindowWidthHeight",
             FLIP_HORIZONTALLY_KEY="flipHorizontally",
-            FLIP_VERTICALLY_KEY="flipVertically";
+            FLIP_VERTICALLY_KEY="flipVertically",
+            URI_IMAGE="uri_image";
 
     CropImageView.Guidelines guidelines = ((CropImageView.Guidelines)GUIDELINES.get(options.getString(GUIDELINES_KEY)))!=null ?
             (CropImageView.Guidelines)GUIDELINES.get(options.getString(GUIDELINES_KEY)) : CropImageView.Guidelines.ON;
     CropImageView.CropShape cropShape = ((CropImageView.CropShape)CROPSHAPES.get(options.getString(CROPSHAPE_KEY))) != null ?
             (CropImageView.CropShape)CROPSHAPES.get(options.getString(CROPSHAPE_KEY)) : CropImageView.CropShape.RECTANGLE;
-
-    CropImage.activity()
+    Uri uri = Uri.parse("file://" + options.getString(URI_IMAGE));
+    CropImage.activity(uri)
             .setGuidelines(guidelines)
             .setActivityTitle(options.getString(TITLE_KEY))
             .setCropShape(cropShape)
@@ -150,37 +153,37 @@ public class ImageCropperModule extends ReactContextBaseJavaModule implements Ac
     }
 
 
-      Boolean transferFileToExternalDir = options.hasKey("transferFileToExternalDir")&&
-              options.getBoolean("transferFileToExternalDir");
-      String externalDirectoryName = this.options.getString("externalDirectoryName");
+    Boolean transferFileToExternalDir = options.hasKey("transferFileToExternalDir")&&
+            options.getBoolean("transferFileToExternalDir");
+    String externalDirectoryName = this.options.getString("externalDirectoryName");
 
-      responseHelper.cleanResponse();
+    responseHelper.cleanResponse();
 
-      Exception error =  null;
-      Uri resultUri= null;
+    Exception error =  null;
+    Uri resultUri= null;
 
-      CropImage.ActivityResult result = CropImage.getActivityResult(data);
+    CropImage.ActivityResult result = CropImage.getActivityResult(data);
 
-      if (resultCode == RESULT_OK) {
-        resultUri = result.getUri();
+    if (resultCode == RESULT_OK) {
+      resultUri = result.getUri();
 
-        //do transfer
-        if(transferFileToExternalDir){
-          try {
-            File transImage= transferImageToGallery(getReactApplicationContext(), resultUri, externalDirectoryName);
-            if(transImage!=null){
-              resultUri = Uri.fromFile(transImage);
-            }
-          }catch (Exception ex){
-            Log.e(TAG,ex.getMessage());
-            error = ex;
+      //do transfer
+      if(transferFileToExternalDir){
+        try {
+          File transImage= transferImageToGallery(getReactApplicationContext(), resultUri, externalDirectoryName);
+          if(transImage!=null){
+            resultUri = Uri.fromFile(transImage);
           }
-
+        }catch (Exception ex){
+          Log.e(TAG,ex.getMessage());
+          error = ex;
         }
 
-      } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
-        error= result.getError();
       }
+
+    } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+      error= result.getError();
+    }
 
     if(error!=null){
       responseHelper.invokeError(callback,error.getMessage());

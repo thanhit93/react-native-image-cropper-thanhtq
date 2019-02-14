@@ -9,23 +9,24 @@ def computeVersionName() {
 
 buildscript {
     repositories {
+        google()
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.1.3'
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion = 28
-    buildToolsVersion = '28.0.3'
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 1
         // get version name from package.json version
         versionName computeVersionName()
@@ -36,10 +37,13 @@ android {
 }
 
 repositories {
+    google()
     mavenCentral()
 }
 
 dependencies {
-    implementation "com.facebook.react:react-native:+"  // From node_modules
-    implementation project(':cropper')
+    compile "com.facebook.react:react-native:+"  // From node_modules
+    compile 'com.theartofdev.edmodo:android-image-cropper:2.6.+'
+    //compile 'com.github.thanhit93:Android-Cropper-Avatar:v0.0.1'
+
 }
