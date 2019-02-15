@@ -21,8 +21,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/thanhit93/react-native-image-cropper-thanhtq.git"
-  },
-  "peerDependencies": {
-    "react-native": ">=0.38.0"
   }
 }
