@@ -81,13 +81,21 @@ RCT_EXPORT_MODULE();
     self.image = image;
 }
 
+- (UIImage *)decodeBase64ToImage:(NSString *)strEncodeData {
+    NSData *data = [[NSData alloc]initWithBase64EncodedString:strEncodeData options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    return [UIImage imageWithData:data];
+}
+
+- (NSString *)encodeToBase64String:(UIImage *)image {
+    return [UIImagePNGRepresentation(image) base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithCarriageReturn];
+}
+
 RCT_EXPORT_METHOD(showViewCrop:(NSString *)urlImage options:(NSDictionary *)options callback:(RCTResponseSenderBlock)callback){
     self.callback = callback; // Save the callback so we can use it from the delegate methods
     self.options = options;
+    NSString *urlBase64 = [self.options valueForKey:@"urlBase64Image"];
+    UIImage *image = [object decodeBase64ToImage:urlBase64];
     self.croppingStyle = TOCropViewCroppingStyleDefault;
-    NSURL *url = [NSURL URLWithString:@"http://www.fnordware.com/superpng/pnggrad16rgb.png"];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    UIImage *image = [UIImage imageWithData:data];
     TOCropViewController *cropController = [[TOCropViewController alloc] initWithCroppingStyle:self.croppingStyle image:image];
     cropController.delegate = self;
 }

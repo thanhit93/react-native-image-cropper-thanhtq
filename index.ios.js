@@ -29,6 +29,7 @@ const DEFAULT_OPTIONS = {
     minCropWindowWidthHeight:[40,40], //dp - min 10 dp,
     flipHorizontally:false,
     flipVertically:false,
+    urlBase64Image: ''
 
 }
 module.exports = {
@@ -38,6 +39,6 @@ module.exports = {
             callback = options;
             options = {};
           }
-          return ImageCropperManager.showViewCrop({...DEFAULT_OPTIONS, ...options}, callback)
+          return ImageCropperManager.showViewCrop('',{...DEFAULT_OPTIONS, ...options}, callback)
     }
 }
