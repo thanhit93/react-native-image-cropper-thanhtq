@@ -2,13 +2,10 @@
   "name": "react-native-image-cropper-thanhtq",
   "version": "0.0.1",
   "private": true,
-  "scripts": {
-    "prepare": "rm -rf android/build Example/android/build Example/android/app/build node_modules",
-    "start": "rm -rf android/build Example/android/build Example/android/app/build node_modules",
-    "test": "jest"
-  },
-  "jest": {},
   "license": "Apache-2.0",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {},
   "keywords": [
     "react-native",
     "android",
