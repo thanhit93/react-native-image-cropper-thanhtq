@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ImageCropperManager : NSObject <RCTBridgeModule>
+@interface ImageCropperManager : UINavigationController <RCTBridgeModule>
 
 @end
 

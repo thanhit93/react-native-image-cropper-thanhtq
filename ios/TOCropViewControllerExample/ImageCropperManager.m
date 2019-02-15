@@ -13,6 +13,8 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <AVFoundation/AVFoundation.h>
 #import <React/RCTUtils.h>
+#import "ViewController.h"
+#import "AppDelegate.h"
 
 @interface ImageCropperManager () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, TOCropViewControllerDelegate>
 
@@ -27,6 +29,7 @@
 @property (nonatomic, strong) NSDictionary *defaultOptions;
 @property (nonatomic, retain) NSMutableDictionary *options, *response;
 @property (nonatomic, strong) NSArray *customButtons;
+@property (nonatomic, readonly) UIViewController *currentViewController;
 
 @end
 
@@ -93,11 +96,33 @@ RCT_EXPORT_MODULE();
 RCT_EXPORT_METHOD(showViewCrop:(NSString *)urlImage options:(NSDictionary *)options callback:(RCTResponseSenderBlock)callback){
     self.callback = callback; // Save the callback so we can use it from the delegate methods
     self.options = options;
-    NSString *urlBase64 = [self.options valueForKey:@"urlBase64Image"];
-    UIImage *image = [object decodeBase64ToImage:urlBase64];
+    //NSString *urlBase64 = [self.options valueForKey:@"urlBase64Image"];
+    //UIImage *image = [self decodeBase64ToImage:urlBase64];
+    NSString *path = [self.options valueForKey:@"path"];
+    NSURL *localurl = [NSURL URLWithString:path];
+    NSData *data = [NSData dataWithContentsOfURL:localurl];
+    UIImage *image = [[UIImage alloc] initWithData:data];
     self.croppingStyle = TOCropViewCroppingStyleDefault;
+    
     TOCropViewController *cropController = [[TOCropViewController alloc] initWithCroppingStyle:self.croppingStyle image:image];
     cropController.delegate = self;
+    AppDelegate *share = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    UINavigationController *nav = (UINavigationController *) share.window.rootViewController;
+    UIViewController *current = [self currentViewController];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [nav presentViewController:cropController animated:YES completion:nil];
+        
+        //[self presentViewController:cropController animated:YES completion:nil];
+    });
+}
+
+- (UIViewController *)currentViewController
+{
+    UIViewController *current = [UIApplication sharedApplication].keyWindow.rootViewController;
+    while (current.presentedViewController && ![current.presentedViewController isKindOfClass:UIAlertController.class]) {
+        current = current.presentedViewController;
+    }
+    return current;
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
@@ -110,6 +135,12 @@ RCT_EXPORT_METHOD(showViewCrop:(NSString *)urlImage options:(NSDictionary *)opti
 {
     self.croppedFrame = cropRect;
     self.angle = angle;
+    NSString *check = [self encodeToBase64String:image];
+    if(check){
+        self.callback(@[check]);
+    } else {
+        self.callback(@[@{@"error": @"Crop error"}]);
+    }
     [self updateImageViewWithImage:image fromCropViewController:cropViewController];
 }
 
@@ -122,7 +153,7 @@ RCT_EXPORT_METHOD(showViewCrop:(NSString *)urlImage options:(NSDictionary *)opti
 
 - (void)updateImageViewWithImage:(UIImage *)image fromCropViewController:(TOCropViewController *)cropViewController
 {
-    
+    [cropViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
