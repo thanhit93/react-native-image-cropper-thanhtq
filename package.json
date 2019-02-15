@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "prepare": "rm -rf android/build Example/android/build Example/android/app/build node_modules",
+    "start": "rm -rf android/build Example/android/build Example/android/app/build node_modules",
     "test": "jest"
   },
   "jest": {},
