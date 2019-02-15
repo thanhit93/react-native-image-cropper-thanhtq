@@ -75,7 +75,7 @@
 		FBDA65802216B326004262B7 /* ImageCropperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA657F2216B326004262B7 /* ImageCropperManager.m */; };
 		FBDA68022216ED69004262B7 /* libCropView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FBDA67FF2216ED69004262B7 /* libCropView.h */; };
 		FBDA68072216EE45004262B7 /* ImageCropperManager.h in Sources */ = {isa = PBXBuildFile; fileRef = FBDA657E2216B326004262B7 /* ImageCropperManager.h */; };
-		FBDA68782216F3C0004262B7 /* ImageCropperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA657F2216B326004262B7 /* ImageCropperManager.m */; };
+		FBDA68802216F7E3004262B7 /* ImageCropperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA657F2216B326004262B7 /* ImageCropperManager.m */; };
 		FE3E0E3A21098448004DAE93 /* TOCropViewConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 220C8E9F21062DD300A9B25D /* TOCropViewConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -668,7 +668,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBDA68782216F3C0004262B7 /* ImageCropperManager.m in Sources */,
+				FBDA68802216F7E3004262B7 /* ImageCropperManager.m in Sources */,
 				FBDA68072216EE45004262B7 /* ImageCropperManager.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

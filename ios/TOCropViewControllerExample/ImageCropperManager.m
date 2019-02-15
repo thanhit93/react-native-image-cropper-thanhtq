@@ -84,6 +84,7 @@ RCT_EXPORT_MODULE();
 RCT_EXPORT_METHOD(showViewCrop:(NSString *)urlImage options:(NSDictionary *)options callback:(RCTResponseSenderBlock)callback){
     self.callback = callback; // Save the callback so we can use it from the delegate methods
     self.options = options;
+    self.croppingStyle = TOCropViewCroppingStyleDefault;
     NSURL *url = [NSURL URLWithString:@"http://www.fnordware.com/superpng/pnggrad16rgb.png"];
     NSData *data = [NSData dataWithContentsOfURL:url];
     UIImage *image = [UIImage imageWithData:data];
