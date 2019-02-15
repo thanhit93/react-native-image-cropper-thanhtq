@@ -4,11 +4,9 @@
   "private": true,
   "scripts": {
     "prepare": "rm -rf android/build Example/android/build Example/android/app/build node_modules",
-    "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
   },
-  "jest": {
-  },
+  "jest": {},
   "license": "Apache-2.0",
   "keywords": [
     "react-native",
