@@ -73,10 +73,9 @@
 		22DB4D9B1B234D07008B8466 /* TOCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DB4D951B234D07008B8466 /* TOCropView.m */; };
 		22DB4D9E1B234D4F008B8466 /* TOActivityCroppedImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DB4D9D1B234D4F008B8466 /* TOActivityCroppedImageProvider.m */; };
 		FBDA65802216B326004262B7 /* ImageCropperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA657F2216B326004262B7 /* ImageCropperManager.m */; };
-		FBDA68012216ED69004262B7 /* libCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA68002216ED69004262B7 /* libCropView.m */; };
 		FBDA68022216ED69004262B7 /* libCropView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FBDA67FF2216ED69004262B7 /* libCropView.h */; };
 		FBDA68072216EE45004262B7 /* ImageCropperManager.h in Sources */ = {isa = PBXBuildFile; fileRef = FBDA657E2216B326004262B7 /* ImageCropperManager.h */; };
-		FBDA68082216EE54004262B7 /* ImageCropperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA657F2216B326004262B7 /* ImageCropperManager.m */; };
+		FBDA68782216F3C0004262B7 /* ImageCropperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA657F2216B326004262B7 /* ImageCropperManager.m */; };
 		FE3E0E3A21098448004DAE93 /* TOCropViewConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 220C8E9F21062DD300A9B25D /* TOCropViewConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -163,7 +162,7 @@
 		CDC8C5771C667B9100BB86A4 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/TOCropViewControllerLocalizable.strings; sourceTree = "<group>"; };
 		FBDA657E2216B326004262B7 /* ImageCropperManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCropperManager.h; sourceTree = "<group>"; };
 		FBDA657F2216B326004262B7 /* ImageCropperManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCropperManager.m; sourceTree = "<group>"; };
-		FBDA67FD2216ED69004262B7 /* liblibCropView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibCropView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBDA67FD2216ED69004262B7 /* libCropView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCropView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBDA67FF2216ED69004262B7 /* libCropView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libCropView.h; sourceTree = "<group>"; };
 		FBDA68002216ED69004262B7 /* libCropView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = libCropView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -273,7 +272,7 @@
 				144B8CC91D22CAFF0085D774 /* TOCropViewController.framework */,
 				2238CF201FC0269C0081B957 /* CropViewControllerExample.app */,
 				2238CF3C1FC029A90081B957 /* CropViewController.framework */,
-				FBDA67FD2216ED69004262B7 /* liblibCropView.a */,
+				FBDA67FD2216ED69004262B7 /* libCropView.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -467,9 +466,9 @@
 			productReference = 2238CF3C1FC029A90081B957 /* CropViewController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FBDA67FC2216ED69004262B7 /* libCropView */ = {
+		FBDA67FC2216ED69004262B7 /* CropView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FBDA68052216ED69004262B7 /* Build configuration list for PBXNativeTarget "libCropView" */;
+			buildConfigurationList = FBDA68052216ED69004262B7 /* Build configuration list for PBXNativeTarget "CropView" */;
 			buildPhases = (
 				FBDA68062216EDD6004262B7 /* Headers */,
 				FBDA67F92216ED69004262B7 /* Sources */,
@@ -480,9 +479,9 @@
 			);
 			dependencies = (
 			);
-			name = libCropView;
+			name = CropView;
 			productName = libCropView;
-			productReference = FBDA67FD2216ED69004262B7 /* liblibCropView.a */;
+			productReference = FBDA67FD2216ED69004262B7 /* libCropView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -553,7 +552,7 @@
 				144B8CC81D22CAFF0085D774 /* TOCropViewController */,
 				223424691ABBC0CD00BBC2B1 /* TOCropViewControllerExample */,
 				2238CF1F1FC0269C0081B957 /* CropViewControllerExample */,
-				FBDA67FC2216ED69004262B7 /* libCropView */,
+				FBDA67FC2216ED69004262B7 /* CropView */,
 			);
 		};
 /* End PBXProject section */
@@ -669,9 +668,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBDA68082216EE54004262B7 /* ImageCropperManager.m in Sources */,
+				FBDA68782216F3C0004262B7 /* ImageCropperManager.m in Sources */,
 				FBDA68072216EE45004262B7 /* ImageCropperManager.h in Sources */,
-				FBDA68012216ED69004262B7 /* libCropView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1150,7 +1148,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FBDA68052216ED69004262B7 /* Build configuration list for PBXNativeTarget "libCropView" */ = {
+		FBDA68052216ED69004262B7 /* Build configuration list for PBXNativeTarget "CropView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FBDA68032216ED69004262B7 /* Debug */,
