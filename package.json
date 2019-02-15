@@ -3,10 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "test": "jest"
   },
   "jest": {
-    "preset": "react-native"
   },
   "license": "Apache-2.0",
   "keywords": [
