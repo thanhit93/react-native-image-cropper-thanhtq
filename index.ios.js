@@ -4,7 +4,9 @@ import { NativeModules } from 'react-native';
 // name as defined via ReactContextBaseJavaModule's getName
 const { ImageCropperManager } = NativeModules;
 const DEFAULT_OPTIONS = {
-    urlBase64Image: ''
+    urlBase64Image: '',
+    aspectRatioPickerButtonHidden: true,
+    aspectRatioLockEnabled: true
 }
 module.exports = {
     ...ImageCropperManager,

@@ -105,13 +105,22 @@ RCT_EXPORT_METHOD(showViewCrop:(NSString *)urlImage options:(NSDictionary *)opti
     self.croppingStyle = TOCropViewCroppingStyleDefault;
     
     TOCropViewController *cropController = [[TOCropViewController alloc] initWithCroppingStyle:self.croppingStyle image:image];
+    cropController.title = @"Crop Image";
+    cropController.allowedAspectRatios = @[@(TOCropViewControllerAspectRatioPresetSquare)];
+    cropController.aspectRatioPreset = TOCropViewControllerAspectRatioPresetSquare; //Set the initial aspect ratio as a square
+    // -- Uncomment this line of code to place the toolbar at the top of the view controller --
+    //cropController.toolbarPosition = TOCropViewControllerToolbarPositionTop;
+    BOOL aspectRatioPickerButtonHidden = [[self.options objectForKey:@"aspectRatioPickerButtonHidden"] boolValue] ? YES: NO;
+    cropController.aspectRatioPickerButtonHidden = aspectRatioPickerButtonHidden;
+    // The crop box is locked to the aspect ratio and can't be resized away from it
+    BOOL aspectRatioLockEnabled = [[self.options objectForKey:@"aspectRatioLockEnabled"] boolValue] ? YES: NO;
+    cropController.aspectRatioLockEnabled = aspectRatioLockEnabled;
     cropController.delegate = self;
     AppDelegate *share = (AppDelegate *)[UIApplication sharedApplication].delegate;
     UINavigationController *nav = (UINavigationController *) share.window.rootViewController;
     UIViewController *current = [self currentViewController];
     dispatch_async(dispatch_get_main_queue(), ^{
         [nav presentViewController:cropController animated:YES completion:nil];
-        
         //[self presentViewController:cropController animated:YES completion:nil];
     });
 }
