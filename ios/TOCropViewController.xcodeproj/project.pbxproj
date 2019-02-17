@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB038AB0221999CC00E20C6E /* libImageCropperManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB35BC2A221805AB000A4F0D /* libImageCropperManager.a */; };
 		FB038AB122199AB700E20C6E /* TOCropViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 2238CF441FC02AE00081B957 /* TOCropViewController.h */; };
 		FB038AB222199AB700E20C6E /* TOCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DB4D831B234CFA008B8466 /* TOCropViewController.m */; };
 		FB038AB322199AD900E20C6E /* UIImage+CropRotate.h in Sources */ = {isa = PBXBuildFile; fileRef = 220C8EAB2106344D00A9B25D /* UIImage+CropRotate.h */; };
@@ -100,7 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB038AB0221999CC00E20C6E /* libImageCropperManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
