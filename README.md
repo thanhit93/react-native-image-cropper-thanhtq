@@ -64,7 +64,6 @@ public class MainApplication extends Application implements ReactApplication {
 
 ```
 --------------------
-You can find a demo client token [here](https://developers.braintreepayments.com/start/hello-client/ios/v3).
 
 ### Usage
 1. For Android:
