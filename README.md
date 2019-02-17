@@ -1,5 +1,11 @@
 # react-native-image-cropper-thanhtq
 
+## Result
+<p align="left">
+<img title="iOS Crop" src="https://github.com/thanhit93/react-native-image-cropper-thanhtq/tree/master/images/image-ios-crop.jpg">
+<img title="Android crop" src="https://github.com/thanhit93/react-native-image-cropper-thanhtq/tree/master/images/image-android-crop.PNG">
+</p>
+
 ## iOS Installation
  do it manually as described below:
  
