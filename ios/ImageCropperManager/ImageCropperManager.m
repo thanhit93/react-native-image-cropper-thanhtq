@@ -13,7 +13,6 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <AVFoundation/AVFoundation.h>
 #import <React/RCTUtils.h>
-#import "ViewController.h"
 #import "AppDelegate.h"
 
 @interface ImageCropperManager () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, TOCropViewControllerDelegate>

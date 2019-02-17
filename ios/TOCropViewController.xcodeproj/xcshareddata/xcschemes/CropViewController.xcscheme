@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "144B8CC81D22CAFF0085D774"
-               BuildableName = "TOCropViewController.framework"
-               BlueprintName = "TOCropViewController"
-               ReferencedContainer = "container:TOCropViewControllerExample.xcodeproj">
+               BlueprintIdentifier = "2238CF3B1FC029A90081B957"
+               BuildableName = "CropViewController.framework"
+               BlueprintName = "CropViewController"
+               ReferencedContainer = "container:TOCropViewController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "144B8CC81D22CAFF0085D774"
-            BuildableName = "TOCropViewController.framework"
-            BlueprintName = "TOCropViewController"
-            ReferencedContainer = "container:TOCropViewControllerExample.xcodeproj">
+            BlueprintIdentifier = "2238CF3B1FC029A90081B957"
+            BuildableName = "CropViewController.framework"
+            BlueprintName = "CropViewController"
+            ReferencedContainer = "container:TOCropViewController.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -63,10 +63,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "144B8CC81D22CAFF0085D774"
-            BuildableName = "TOCropViewController.framework"
-            BlueprintName = "TOCropViewController"
-            ReferencedContainer = "container:TOCropViewControllerExample.xcodeproj">
+            BlueprintIdentifier = "2238CF3B1FC029A90081B957"
+            BuildableName = "CropViewController.framework"
+            BlueprintName = "CropViewController"
+            ReferencedContainer = "container:TOCropViewController.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

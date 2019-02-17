@@ -18,7 +18,7 @@
                BlueprintIdentifier = "2F5062DB1F53E2D900AA9F14"
                BuildableName = "TOCropViewControllerExample-Extension.appex"
                BlueprintName = "TOCropViewControllerExample-Extension"
-               ReferencedContainer = "container:TOCropViewControllerExample.xcodeproj">
+               ReferencedContainer = "container:TOCropViewController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -32,7 +32,7 @@
                BlueprintIdentifier = "223424691ABBC0CD00BBC2B1"
                BuildableName = "TOCropViewControllerExample.app"
                BlueprintName = "TOCropViewControllerExample"
-               ReferencedContainer = "container:TOCropViewControllerExample.xcodeproj">
+               ReferencedContainer = "container:TOCropViewController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -50,7 +50,7 @@
             BlueprintIdentifier = "2F5062DB1F53E2D900AA9F14"
             BuildableName = "TOCropViewControllerExample-Extension.appex"
             BlueprintName = "TOCropViewControllerExample-Extension"
-            ReferencedContainer = "container:TOCropViewControllerExample.xcodeproj">
+            ReferencedContainer = "container:TOCropViewController.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -74,7 +74,7 @@
             BlueprintIdentifier = "223424691ABBC0CD00BBC2B1"
             BuildableName = "TOCropViewControllerExample.app"
             BlueprintName = "TOCropViewControllerExample"
-            ReferencedContainer = "container:TOCropViewControllerExample.xcodeproj">
+            ReferencedContainer = "container:TOCropViewController.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,7 +94,7 @@
             BlueprintIdentifier = "223424691ABBC0CD00BBC2B1"
             BuildableName = "TOCropViewControllerExample.app"
             BlueprintName = "TOCropViewControllerExample"
-            ReferencedContainer = "container:TOCropViewControllerExample.xcodeproj">
+            ReferencedContainer = "container:TOCropViewController.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

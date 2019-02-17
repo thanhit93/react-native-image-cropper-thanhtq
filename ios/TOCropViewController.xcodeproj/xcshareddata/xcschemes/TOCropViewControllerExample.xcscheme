@@ -17,7 +17,7 @@
                BlueprintIdentifier = "223424691ABBC0CD00BBC2B1"
                BuildableName = "TOCropViewControllerExample.app"
                BlueprintName = "TOCropViewControllerExample"
-               ReferencedContainer = "container:TOCropViewControllerExample.xcodeproj">
+               ReferencedContainer = "container:TOCropViewController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "223424821ABBC0CD00BBC2B1"
                BuildableName = "TOCropViewControllerExampleTests.xctest"
                BlueprintName = "TOCropViewControllerExampleTests"
-               ReferencedContainer = "container:TOCropViewControllerExample.xcodeproj">
+               ReferencedContainer = "container:TOCropViewController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "220611961B2E6777001A467B"
                BuildableName = "TOCropViewControllerTests.xctest"
                BlueprintName = "TOCropViewControllerTests"
-               ReferencedContainer = "container:TOCropViewControllerExample.xcodeproj">
+               ReferencedContainer = "container:TOCropViewController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -63,7 +63,7 @@
                BlueprintIdentifier = "223424821ABBC0CD00BBC2B1"
                BuildableName = "TOCropViewControllerExampleTests.xctest"
                BlueprintName = "TOCropViewControllerExampleTests"
-               ReferencedContainer = "container:TOCropViewControllerExample.xcodeproj">
+               ReferencedContainer = "container:TOCropViewController.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -73,7 +73,7 @@
                BlueprintIdentifier = "220611961B2E6777001A467B"
                BuildableName = "TOCropViewControllerTests.xctest"
                BlueprintName = "TOCropViewControllerTests"
-               ReferencedContainer = "container:TOCropViewControllerExample.xcodeproj">
+               ReferencedContainer = "container:TOCropViewController.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -83,7 +83,7 @@
             BlueprintIdentifier = "223424691ABBC0CD00BBC2B1"
             BuildableName = "TOCropViewControllerExample.app"
             BlueprintName = "TOCropViewControllerExample"
-            ReferencedContainer = "container:TOCropViewControllerExample.xcodeproj">
+            ReferencedContainer = "container:TOCropViewController.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -106,7 +106,7 @@
             BlueprintIdentifier = "223424691ABBC0CD00BBC2B1"
             BuildableName = "TOCropViewControllerExample.app"
             BlueprintName = "TOCropViewControllerExample"
-            ReferencedContainer = "container:TOCropViewControllerExample.xcodeproj">
+            ReferencedContainer = "container:TOCropViewController.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -125,7 +125,7 @@
             BlueprintIdentifier = "223424691ABBC0CD00BBC2B1"
             BuildableName = "TOCropViewControllerExample.app"
             BlueprintName = "TOCropViewControllerExample"
-            ReferencedContainer = "container:TOCropViewControllerExample.xcodeproj">
+            ReferencedContainer = "container:TOCropViewController.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

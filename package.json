@@ -1,6 +1,6 @@
 {
   "name": "react-native-image-cropper-thanhtq",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "license": "Apache-2.0",
   "scripts": {},
@@ -9,9 +9,11 @@
   "keywords": [
     "react-native",
     "android",
+    "ios",
     "library",
     "image",
-    "crop"
+    "crop",
+    "avatar"
   ],
   "repository": {
     "type": "git",
