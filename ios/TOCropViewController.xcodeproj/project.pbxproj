@@ -26,6 +26,7 @@
 		220C8EAD2106344D00A9B25D /* UIImage+CropRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 220C8EAA2106344D00A9B25D /* UIImage+CropRotate.m */; };
 		220C8EB22106344D00A9B25D /* UIImage+CropRotate.h in Headers */ = {isa = PBXBuildFile; fileRef = 220C8EAB2106344D00A9B25D /* UIImage+CropRotate.h */; };
 		2238CF451FC02AE00081B957 /* TOCropViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2238CF441FC02AE00081B957 /* TOCropViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB038AAE2219977200E20C6E /* TOCropViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 144B8CC91D22CAFF0085D774 /* TOCropViewController.framework */; };
 		FB35BC2E221805AB000A4F0D /* ImageCropperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB35BC2D221805AB000A4F0D /* ImageCropperManager.m */; };
 		FB35BC2F221805AB000A4F0D /* ImageCropperManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FB35BC2C221805AB000A4F0D /* ImageCropperManager.h */; };
 		FB35BC3322180616000A4F0D /* ImageCropperManager.h in Sources */ = {isa = PBXBuildFile; fileRef = FB35BC2C221805AB000A4F0D /* ImageCropperManager.h */; };
@@ -106,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB038AAE2219977200E20C6E /* TOCropViewController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +435,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/TOCropViewController/Supporting/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.timoliver.TOCropViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -466,7 +468,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/TOCropViewController/Supporting/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.timoliver.TOCropViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
